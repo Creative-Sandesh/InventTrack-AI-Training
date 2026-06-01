@@ -84,17 +84,62 @@ D --> F[(🐘 PostgreSQL)]
 InventTrack/
 │
 ├── backend/
-│   ├── app/
-│   ├── tests/
+│   ├── .dockerignore
+│   ├── .env.example
+│   ├── .env (optional)
+│   ├── Dockerfile
+│   ├── drop_tables.py
+│   ├── README.md
 │   ├── requirements.txt
 │   ├── requirements-dev.txt
-│   └── Dockerfile
+│   ├── reports/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── auth.py
+│   │   ├── crud.py
+│   │   ├── database.py
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   └── schemas.py
+│   └── tests/
+│       ├── __init__.py
+│       ├── conftest.py
+│       ├── test_auth.py
+│       ├── test_inventories.py
+│       └── test_items.py
 │
 ├── frontend/
-│   ├── src/
+│   ├── README.md
 │   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── tsconfig.app.json
 │   ├── tsconfig.json
-│   └── vite.config.ts
+│   ├── tsconfig.node.json
+│   ├── vercel.json
+│   ├── vite.config.ts
+│   └── src/
+│       ├── api.ts
+│       ├── App.tsx
+│       ├── config.ts
+│       ├── index.css
+│       ├── main.tsx
+│       ├── types.ts
+│       ├── vite-env.d.ts
+│       ├── components/
+│       │   ├── Layout.tsx
+│       │   └── ProtectedRoute.tsx
+│       ├── context/
+│       │   └── AuthContext.tsx
+│       └── pages/
+│           ├── CategoryDetail.tsx
+│           ├── Dashboard.tsx
+│           ├── Inventories.tsx
+│           ├── InventoryDetail.tsx
+│           ├── Items.tsx
+│           ├── Login.tsx
+│           └── Register.tsx
 │
 └── README.md
 ```
